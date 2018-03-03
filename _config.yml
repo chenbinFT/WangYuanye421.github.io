@@ -12,7 +12,7 @@ github_repo: "https://github.com/WangYuanye421/WangYuanye421.github.io.git" # yo
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "这是侧边栏描述!"
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/about-my-header.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -30,10 +30,10 @@ github_username:    WangYuanye421
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+#permalink: pretty
+#paginate: 10
+#exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+#anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
 

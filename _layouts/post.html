@@ -10,7 +10,8 @@ layout: default
 <style type="text/css">
     header.intro-header{
         position: relative;
-        background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
+        background-image: url(
+        '{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
     }
 
     {% if page.header-mask %}
@@ -33,14 +34,19 @@ layout: default
                         <a class="tag" href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
                         {% endfor %}
                     </div>
+                    <!--标题-->
                     <h1>{{ page.title }}</h1>
                     {% comment %}
                         always create a h2 for keeping the margin , Hux
                     {% endcomment %}
                     {% comment %} if page.subtitle {% endcomment %}
+                    <!--副标题-->
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% comment %} endif {% endcomment %}
-                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+                    <hr>
+                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}</span>
+                    <br>
+                    <span>on {{ page.date | date: "%B %-d, %Y" }}</span>
                 </div>
             </div>
         </div>
@@ -66,7 +72,7 @@ layout: default
                     {% if page.previous.url %}
                     <li class="previous">
                         <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
-                        Previous<br>
+                        上一篇<br>
                         <span>{{page.previous.title}}</span>
                         </a>
                     </li>
@@ -74,7 +80,7 @@ layout: default
                     {% if page.next.url %}
                     <li class="next">
                         <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
-                        Next<br>
+                        下一篇<br>
                         <span>{{page.next.title}}</span>
                         </a>
                     </li>
@@ -115,15 +121,11 @@ layout: default
 
     <!-- Side Catalog Container -->
         {% if page.catalog %}
-            <div class="
-                col-lg-2 col-lg-offset-0
-                visible-lg-block
-                sidebar-container
-                catalog-container">
+            <div class="col-lg-2 col-lg-offset-0 visible-lg-block sidebar-container catalog-container">
                 <div class="side-catalog">
                     <hr class="hidden-sm hidden-xs">
                     <h5>
-                        <a class="catalog-toggle" href="#">CATALOG</a>
+                        <a class="catalog-toggle" href="#">纲 要</a>
                     </h5>
                     <ul class="catalog-body"></ul>
                 </div>
@@ -131,12 +133,8 @@ layout: default
         {% endif %}
 
     <!-- Sidebar Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
+            <!--<div class=" col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
+                &lt;!&ndash; Featured Tags &ndash;&gt;
                 {% if site.featured-tags %}
                 <section>
                     <hr class="hidden-sm hidden-xs">
@@ -153,7 +151,7 @@ layout: default
                 </section>
                 {% endif %}
 
-                <!-- Friends Blog -->
+                &lt;!&ndash; Friends Blog &ndash;&gt;
                 {% if site.friends %}
                 <hr>
                 <h5>FRIENDS</h5>
@@ -163,7 +161,7 @@ layout: default
                     {% endfor %}
                 </ul>
                 {% endif %}
-            </div>
+            </div>-->
         </div>
     </div>
 </article>

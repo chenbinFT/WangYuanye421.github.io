@@ -20,6 +20,7 @@ layout: default
 <!-- Main Content -->
 <div class="container">
 	<div class="row">
+        <!--Sidebar Setting ,侧边栏是否启用-->
         {% if site.sidebar == false %}
 <!-- NO SIDEBAR -->
     <!-- PostList Container -->
@@ -36,7 +37,7 @@ layout: default
                 {% if site.featured-tags %}
                 <section>
                     <!-- no hr -->
-                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">FEATURED TAGS</a></h5>
+                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">文章标签</a></h5>
                     <div class="tags">
         				{% for tag in site.tags %}
                             {% if tag[1].size > {{site.featured-condition-size}} %}
@@ -85,7 +86,7 @@ layout: default
                 {% if site.featured-tags %}
                 <section>
                     <hr class="hidden-sm hidden-xs">
-                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">FEATURED TAGS</a></h5>
+                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">文章标签</a></h5>
                     <div class="tags">
                         {% for tag in site.tags %}
                             {% if tag[1].size > {{site.featured-condition-size}} %}
@@ -193,7 +194,7 @@ layout: default
                 <!-- Friends Blog -->
                 {% if site.friends %}
                 <hr>
-                <h5>FRIENDS</h5>
+                <h5>友情链接</h5>
                 <ul class="list-inline">
                     {% for friend in site.friends %}
                         <li><a href="{{friend.href}}">{{friend.title}}</a></li>

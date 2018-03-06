@@ -44,7 +44,7 @@ layout: default
                     <hr>
                     <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}</span>
                     <br>
-                    <span>on {{ page.date | date: "%B %-d, %Y" }}</span>
+                    <span class="meta">on {{ page.date | date: "%B %-d, %Y" }}</span>
                 </div>
             </div>
         </div>
@@ -123,7 +123,7 @@ layout: default
                 <div class="side-catalog">
                     <hr class="hidden-sm hidden-xs">
                     <h5>
-                        <a class="catalog-toggle" href="#">纲 要</a>
+                        <a class="catalog-toggle" href="#">文章纲要</a>
                     </h5>
                     <ul class="catalog-body"></ul>
                 </div>
@@ -131,35 +131,35 @@ layout: default
         {% endif %}
 
     <!-- Sidebar Container -->
-            <!--<div class=" col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
-                &lt;!&ndash; Featured Tags &ndash;&gt;
-                {% if site.featured-tags %}
-                <section>
-                    <hr class="hidden-sm hidden-xs">
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-                    <div class="tags">
-        				{% for tag in site.tags %}
-                            {% if tag[1].size > {{site.featured-condition-size}} %}
-                				<a href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-                                    {{ tag[0] }}
-                                </a>
-                            {% endif %}
-        				{% endfor %}
-        			</div>
-                </section>
-                {% endif %}
-
-                &lt;!&ndash; Friends Blog &ndash;&gt;
-                {% if site.friends %}
-                <hr>
-                <h5>FRIENDS</h5>
-                <ul class="list-inline">
-                    {% for friend in site.friends %}
-                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
+        <!--<div class=" col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
+            &lt;!&ndash; Featured Tags &ndash;&gt;
+            {% if site.featured-tags %}
+            <section>
+                <hr class="hidden-sm hidden-xs">
+                <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                <div class="tags">
+                    {% for tag in site.tags %}
+                        {% if tag[1].size > {{site.featured-condition-size}} %}
+                            <a href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                                {{ tag[0] }}
+                            </a>
+                        {% endif %}
                     {% endfor %}
-                </ul>
-                {% endif %}
-            </div>-->
+                </div>
+            </section>
+            {% endif %}
+
+            &lt;!&ndash; Friends Blog &ndash;&gt;
+            {% if site.friends %}
+            <hr>
+            <h5>FRIENDS</h5>
+            <ul class="list-inline">
+                {% for friend in site.friends %}
+                    <li><a href="{{friend.href}}">{{friend.title}}</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>-->
         </div>
     </div>
 </article>
